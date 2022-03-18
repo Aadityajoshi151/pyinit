@@ -25,7 +25,17 @@ myfile.close()
 print("gitignore file created")
 path = path+"/src"
 os.chdir(path)  #Moves into the src folder
+content = """#imports
+
+def main():
+    print("Main Begins")
+
+if __name__ == "__main__":
+    main()
+ """
+
 myfile = open(f"{project_name}.py","w")  #Creates empty python file with project name
+myfile.write(content)
 myfile.close()
 print(f"{project_name}.py file created")
 print("All Done!")
