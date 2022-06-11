@@ -3,7 +3,7 @@ import os
 print(os.getcwd())
 path = input("Please enter the path\n")
 project_name = input("Please enter project name\n")
-project_name = project_name.replace(" ","_")  # Replaces spaces with underscores
+project_name = project_name.replace(" ","-")  # Replaces spaces with dashes
 os.chdir(path)  #Changes current working directory to the path provided
 os.mkdir(project_name)  #Creates folder with project name
 path = path+"/"+project_name
@@ -14,7 +14,7 @@ print("Assets folder created")  #Creates assets folder
 os.mkdir("src")
 print("src folder created")  #Creates src folder
 myfile = open("README.md","w")  #Creates README file
-myfile.write(f"## {project_name.replace('_',' ')}")  #Writes project name in h2 in README file. Spaces are allowed.
+myfile.write(f"## {project_name.replace('-',' ')}")  #Writes project name in h2 in README file. Spaces are allowed.
 myfile.close()
 print("README file created")
 myfile = open("requirements.txt","w")  #Creates requirements file
